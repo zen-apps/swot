@@ -364,7 +364,18 @@ async def generate_swot_category(category: str, company_name: str, desired_outco
 
 Provide your response as a numbered list (1-6) with each statement being 60 words or less. Prioritize by impact on the desired outcomes."""
 
+    # Log the prompt being sent
+    print(f"\n{'='*60}")
+    print(f"LLM CALL - {category}")
+    print(f"{'='*60}")
+    print(f"PROMPT:\n{prompt}\n")
+    
     response = llm.invoke([HumanMessage(content=prompt)])
+    
+    # Log the response received
+    print(f"RESPONSE:\n{response.content}\n")
+    print(f"{'='*60}\n")
+    
     return response.content
 
 
