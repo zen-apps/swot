@@ -18,3 +18,9 @@ echo "OPENAI_API_KEY=sk-your-key-here" > .env
 
 # Run the application
 uvicorn main:app --reload
+
+# When Done
+control + c 
+
+# shut done the venv
+deactivate
